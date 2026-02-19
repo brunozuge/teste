@@ -1,169 +1,158 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Para Meu Amor 💚</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Quicksand', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <title>PetShop Amigo Fiel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #b6f5b0, #48b36c);
-      color: #ffffff;
-      text-align: center;
-      padding: 30px;
-      transition: background 1s;
-      overflow: hidden;
-    }
+        body {
+            background: #f9f9f9;
+            color: #333;
+        }
 
-    .container {
-      max-width: 800px;
-      background: rgba(255, 255, 255, 0.15);
-      padding: 30px 35px;
-      border-radius: 20px;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-      animation: fadeIn 2s ease-in;
-      backdrop-filter: blur(8px);
-    }
+        header {
+            background: #ff914d;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-    h1 {
-      font-size: 2.6rem;
-      margin-bottom: 25px;
-      font-weight: 600;
-      animation: pulse 2.5s infinite;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    }
+        header h1 {
+            font-size: 24px;
+        }
 
-    p {
-      font-size: 1.25rem;
-      line-height: 1.8;
-      margin-bottom: 35px;
-      white-space: pre-line;
-      color: #eafbea;
-    }
+        nav a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    button {
-      background-color: #91e68a;
-      color: #fff;
-      border: none;
-      padding: 14px 35px;
-      font-size: 1.1rem;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      font-weight: 600;
-    }
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-    button:hover {
-      background-color: #75d874;
-      transform: scale(1.1);
-    }
+        .banner {
+            background: #ffe5d0;
+            text-align: center;
+            padding: 60px 20px;
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        .banner h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
+        .servicos {
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-    /* Corações */
-    .heart {
-      position: absolute;
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 20px;
-      animation: floatUp 6s linear infinite;
-      z-index: 0;
-    }
+        .servicos h2 {
+            margin-bottom: 20px;
+        }
 
-    @keyframes floatUp {
-      0% { transform: translateY(100vh) scale(0.8); opacity: 1; }
-      100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
-    }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
 
-    /* Responsividade */
-    @media (max-width: 1024px) {
-      h1 { font-size: 2.3rem; }
-      p { font-size: 1.15rem; }
-    }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            font-size: 18px;
+        }
 
-    @media (max-width: 768px) {
-      .container { padding: 25px; }
-      h1 { font-size: 2rem; }
-      p { font-size: 1.05rem; line-height: 1.6; }
-      button { font-size: 1rem; padding: 12px 28px; }
-    }
+        .sobre, .contato {
+            padding: 40px 20px;
+            background: white;
+            margin-top: 20px;
+            text-align: center;
+        }
 
-    @media (max-width: 480px) {
-      .container { padding: 20px; }
-      h1 { font-size: 1.7rem; }
-      p { font-size: 1rem; }
-      button { padding: 10px 25px; }
-    }
-  </style>
+        footer {
+            background: #ff914d;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>💚 Para o Amor da Minha Vida 💚</h1>
+<header>
+    <h1>🐶 PetShop Amigo Fiel</h1>
+    <nav>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <h2>Cuidando do seu pet com amor ❤️</h2>
+    <p>Banho, tosa, produtos e atendimento veterinário</p>
+</section>
+
+<section id="servicos" class="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="cards">
+        <div class="card">🛁 Banho</div>
+        <div class="card">✂️ Tosa</div>
+        <div class="card">🐕 Veterinário</div>
+        <div class="card">🦴 Loja Pet</div>
+    </div>
+</section>
+
+<section id="sobre" class="sobre">
+    <h2>Sobre Nós</h2>
     <p>
-      Amor, eu queria que você soubesse o quanto é especial pra mim. 💫  
-      Desde que você entrou na minha vida, tudo ganhou cor, leveza e sentido.  
-      Seu sorriso é o meu amanhecer favorito, e o seu abraço é o meu lugar de paz. 🌿  
-      
-      Eu amo cada pedacinho de você — o jeito que fala, o jeito que ri, o modo como se importa.  
-      Você transforma os meus dias, mesmo quando tudo parece difícil.  
-      
-      Quando penso em nós, eu só consigo agradecer por ter alguém tão incrível ao meu lado.  
-      Você é o meu porto seguro, meu refúgio, meu melhor acaso e o meu maior acerto. 💞  
-      
-      Eu te prometo amor sincero, carinho, paciência e parceria pra vida toda.  
-      Que a gente continue crescendo juntos, sonhando juntos e se amando em cada detalhe. 💚✨  
-      
-      Porque com você, o mundo é mais bonito — e o meu coração é completamente seu. 💫
+        Somos apaixonados por animais! Nosso petshop oferece serviços de qualidade,
+        cuidado, higiene e carinho para o seu melhor amigo.
     </p>
+</section>
 
-    <button id="surpresa">Clique aqui, meu amor 💚</button>
-  </div>
+<section id="contato" class="contato">
+    <h2>Contato</h2>
+    <p>📍 Rua dos Pets, 123</p>
+    <p>📞 (51) 99999-9999</p>
+    <p>📧 contato@petshop.com</p>
+</section>
 
-  <script>
-    const button = document.getElementById('surpresa');
-
-    button.addEventListener('click', () => {
-      alert("Te amo infinitamente 💚 Você é tudo pra mim!");
-    });
-
-    // Corações flutuando
-    function criarCoracao() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.innerHTML = '💚';
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.fontSize = Math.random() * 25 + 10 + 'px';
-      heart.style.animationDuration = Math.random() * 3 + 4 + 's';
-      document.body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 7000);
-    }
-
-    setInterval(criarCoracao, 400);
-  </script>
+<footer>
+    <p>© 2026 - PetShop Amigo Fiel</p>
+</footer>
 
 </body>
 </html>
