@@ -1,158 +1,326 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>PetShop Amigo Fiel</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Amigo | Cuidado simples, feito com carinho</title>
 
-        body {
-            background: #f9f9f9;
-            color: #333;
-        }
+<style>
+:root{
+    --brand:#1b8a5a;
+    --brand-dark:#0f5f3e;
+    --accent:#facc15;
+    --dark:#1f2933;
+    --bg:#eef4f1;
+    --card:#f9fbfa;
+}
 
-        header {
-            background: #ff914d;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-        header h1 {
-            font-size: 24px;
-        }
+body{
+    background:var(--bg);
+    color:var(--dark);
+}
 
-        nav a {
-            color: white;
-            margin-left: 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* HEADER */
+header{
+    background:var(--card);
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+header h1{
+    color:var(--brand);
+    font-size:26px;
+}
 
-        .banner {
-            background: #ffe5d0;
-            text-align: center;
-            padding: 60px 20px;
-        }
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#2d2d2d;
+    font-weight:600;
+}
 
-        .banner h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
+/* HERO */
+.hero{
+    background:linear-gradient(120deg,var(--brand),var(--brand-dark));
+    color:white;
+    padding:75px 8%;
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:40px;
+}
 
-        .servicos {
-            padding: 40px 20px;
-            text-align: center;
-        }
+.hero h2{
+    font-size:38px;
+    margin-bottom:15px;
+}
 
-        .servicos h2 {
-            margin-bottom: 20px;
-        }
+.hero p{
+    font-size:17px;
+    margin-bottom:25px;
+    opacity:.95;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            max-width: 900px;
-            margin: auto;
-        }
+.hero .highlight{
+    background:var(--accent);
+    color:#000;
+    padding:8px 14px;
+    border-radius:20px;
+    font-weight:bold;
+    display:inline-block;
+    margin-bottom:20px;
+}
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            font-size: 18px;
-        }
+.hero img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
 
-        .sobre, .contato {
-            padding: 40px 20px;
-            background: white;
-            margin-top: 20px;
-            text-align: center;
-        }
+/* SECTIONS */
+section{
+    padding:70px 8%;
+}
 
-        footer {
-            background: #ff914d;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-        }
+section h3{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:45px;
+    color:#183c2b;
+}
 
-        /* Responsivo */
-        @media (max-width: 600px) {
-            header {
-                justify-content: center;
-                text-align: center;
-            }
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
 
-            nav {
-                margin-top: 10px;
-            }
+.service{
+    background:var(--card);
+    padding:32px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
 
-            nav a {
-                margin: 0 10px;
-            }
-        }
-    </style>
+.service h4{
+    margin-bottom:12px;
+    color:var(--brand-dark);
+}
+
+.price{
+    margin-top:15px;
+    font-weight:bold;
+    color:var(--brand);
+}
+
+/* DIFFERENTIAL */
+#diferenciais{
+    background:#ddebe5;
+}
+
+.differentials{
+    border-radius:24px;
+    padding:55px;
+    max-width:950px;
+    margin:auto;
+    background:var(--card);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.differentials p{
+    text-align:center;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+.differentials ul{
+    list-style:none;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.differentials li{
+    font-size:17px;
+    background:#e6f1ec;
+    padding:18px;
+    border-radius:14px;
+}
+
+/* CONTACT */
+#contato{
+    background:#e6f1ec;
+}
+
+.contact{
+    border-radius:24px;
+    padding:55px;
+    max-width:950px;
+    margin:auto;
+    background:var(--card);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact h4{
+    margin-bottom:15px;
+    color:var(--brand-dark);
+}
+
+.contact p{
+    font-size:17px;
+    margin-bottom:10px;
+}
+
+.contact .box{
+    background:#f0f7f4;
+    padding:25px;
+    border-radius:16px;
+}
+
+/* FOOTER */
+footer{
+    background:var(--brand-dark);
+    color:white;
+    text-align:center;
+    padding:35px 8%;
+    margin-top:60px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#22c55e;
+    color:white;
+    padding:14px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .differentials ul{
+        grid-template-columns:1fr;
+    }
+
+    .contact{
+        grid-template-columns:1fr;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>🐶 PetShop Amigo Fiel</h1>
+    <h1>Pet Amigo</h1>
     <nav>
         <a href="#servicos">Serviços</a>
-        <a href="#sobre">Sobre</a>
+        <a href="#diferenciais">Por que nós?</a>
         <a href="#contato">Contato</a>
     </nav>
 </header>
 
-<section class="banner">
-    <h2>Cuidando do seu pet com amor ❤️</h2>
-    <p>Banho, tosa, produtos e atendimento veterinário</p>
+<section class="hero">
+    <div>
+        <span class="highlight">Cuidado responsável e preços justos</span>
+        <h2>O cuidado que seu pet precisa no dia a dia</h2>
+        <p>
+            Trabalhamos com atenção, higiene e respeito em cada atendimento,
+            sempre priorizando a saúde e o bem-estar do seu animal.
+        </p>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e" alt="Cachorro sendo cuidado">
 </section>
 
-<section id="servicos" class="servicos">
-    <h2>Nossos Serviços</h2>
-    <div class="cards">
-        <div class="card">🛁 Banho</div>
-        <div class="card">✂️ Tosa</div>
-        <div class="card">🐕 Veterinário</div>
-        <div class="card">🦴 Loja Pet</div>
+<section id="servicos">
+    <h3>Nossos Serviços</h3>
+    <div class="services">
+        <div class="service">
+            <h4>Banho</h4>
+            <p>Limpeza completa com produtos adequados para cada tipo de pet.</p>
+            <div class="price">A partir de R$ 40</div>
+        </div>
+
+        <div class="service">
+            <h4>Tosa</h4>
+            <p>Tosa higiênica ou padrão, feita com calma e cuidado.</p>
+            <div class="price">A partir de R$ 60</div>
+        </div>
+
+        <div class="service">
+            <h4>Loja Pet</h4>
+            <p>Rações, acessórios e itens essenciais para o dia a dia.</p>
+            <div class="price">Preços acessíveis</div>
+        </div>
     </div>
 </section>
 
-<section id="sobre" class="sobre">
-    <h2>Sobre Nós</h2>
-    <p>
-        Somos apaixonados por animais! Nosso petshop oferece serviços de qualidade,
-        cuidado, higiene e carinho para o seu melhor amigo.
-    </p>
+<section id="diferenciais">
+    <h3>Por que escolher o Pet Amigo?</h3>
+    <div class="differentials">
+        <p>
+            Nosso trabalho é baseado em responsabilidade, cuidado e confiança.
+            Cada atendimento é feito com atenção real ao animal e ao tutor.
+        </p>
+
+        <ul>
+            <li>✔ Atendimento cuidadoso e respeitoso</li>
+            <li>✔ Profissionais experientes</li>
+            <li>✔ Ambiente limpo e seguro</li>
+            <li>✔ Transparência nos serviços</li>
+            <li>✔ Compromisso com o bem-estar</li>
+            <li>✔ Relação de confiança com os clientes</li>
+        </ul>
+    </div>
 </section>
 
-<section id="contato" class="contato">
-    <h2>Contato</h2>
-    <p>📍 Rua dos Pets, 123</p>
-    <p>📞 (51) 99999-9999</p>
-    <p>📧 contato@petshop.com</p>
+<section id="contato">
+    <h3>Contato</h3>
+    <div class="contact">
+        <div class="box">
+            <h4>📍 Endereço</h4>
+            <p>Rua Exemplo, 123</p>
+            <p>Cidade / Estado</p>
+        </div>
+
+        <div class="box">
+            <h4>📞 Atendimento</h4>
+            <p>Telefone: (51) 99999-9999</p>
+            <p>Seg a Sáb • 8h às 18h</p>
+            <p>Atendimento presencial e WhatsApp</p>
+        </div>
+    </div>
 </section>
 
 <footer>
-    <p>© 2026 - PetShop Amigo Fiel</p>
+    <p>© 2026 Pet Amigo • Cuidado, confiança e respeito</p>
 </footer>
+
+<a class="whatsapp" href="https://wa.me/5551999522416" target="_blank">
+    WhatsApp
+</a>
 
 </body>
 </html>
