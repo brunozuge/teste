@@ -3,228 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pet Amigo | Cuidado simples, feito com carinho</title>
+<title>Amigo Animal | Cuidado Completo para Seu Pet</title>
 
 <style>
-:root{
-    --brand:#1b8a5a;
-    --brand-dark:#0f5f3e;
-    --accent:#facc15;
-    --dark:#1f2933;
-    --bg:#eef4f1;
-    --card:#f9fbfa;
+:root {
+    --principal: #1f7a63;
+    --secundaria: #f4a261;
+    --escura: #264653;
+    --clara: #f1f7f5;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-body{
-    background:var(--bg);
-    color:var(--dark);
+body {
+    background: var(--clara);
+    color: #333;
+    line-height: 1.6;
 }
 
 /* HEADER */
-header{
-    background:var(--card);
-    padding:18px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
+header {
+    background: var(--escura);
+    color: white;
+    padding: 20px;
 }
 
-header h1{
-    color:var(--brand);
-    font-size:26px;
+.header-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav a{
-    margin-left:20px;
-    text-decoration:none;
-    color:#2d2d2d;
-    font-weight:600;
+header h1 {
+    font-size: 22px;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 /* HERO */
-.hero{
-    background:linear-gradient(120deg,var(--brand),var(--brand-dark));
-    color:white;
-    padding:75px 8%;
-    display:grid;
-    grid-template-columns:1.1fr 1fr;
-    gap:40px;
+.hero {
+    background: linear-gradient(rgba(31,122,99,0.85), rgba(31,122,99,0.85)),
+    url("https://images.unsplash.com/photo-1558788353-f76d92427f16") center/cover;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
 }
 
-.hero h2{
-    font-size:38px;
-    margin-bottom:15px;
+.hero h2 {
+    font-size: 36px;
+    max-width: 700px;
+    margin: auto;
 }
 
-.hero p{
-    font-size:17px;
-    margin-bottom:25px;
-    opacity:.95;
-}
-
-.hero .highlight{
-    background:var(--accent);
-    color:#000;
-    padding:8px 14px;
-    border-radius:20px;
-    font-weight:bold;
-    display:inline-block;
-    margin-bottom:20px;
-}
-
-.hero img{
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 20px 40px rgba(0,0,0,.35);
+.hero p {
+    margin-top: 15px;
+    font-size: 18px;
 }
 
 /* SECTIONS */
-section{
-    padding:70px 8%;
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
 }
 
-section h3{
-    text-align:center;
-    font-size:30px;
-    margin-bottom:45px;
-    color:#183c2b;
+section h3 {
+    color: var(--escura);
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-/* SERVICES */
-.services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
+/* SERVIÇOS */
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
-.service{
-    background:var(--card);
-    padding:32px;
-    border-radius:18px;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
+.servico {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
 }
 
-.service h4{
-    margin-bottom:12px;
-    color:var(--brand-dark);
+.servico span {
+    font-size: 40px;
 }
 
-.price{
-    margin-top:15px;
-    font-weight:bold;
-    color:var(--brand);
+.servico h4 {
+    margin: 15px 0 10px;
+    color: var(--principal);
 }
 
-/* DIFFERENTIAL */
-#diferenciais{
-    background:#ddebe5;
+/* POR QUE NÓS */
+.porque {
+    background: var(--principal);
+    color: white;
+    border-radius: 20px;
+    padding: 50px;
 }
 
-.differentials{
-    border-radius:24px;
-    padding:55px;
-    max-width:950px;
-    margin:auto;
-    background:var(--card);
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
+.porque ul {
+    list-style: none;
+    margin-top: 20px;
 }
 
-.differentials p{
-    text-align:center;
-    font-size:18px;
-    margin-bottom:35px;
+.porque li {
+    margin-bottom: 15px;
+    font-size: 18px;
 }
 
-.differentials ul{
-    list-style:none;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
+/* CONTATO */
+.contato {
+    background: var(--escura);
+    color: white;
+    border-radius: 20px;
+    padding: 50px;
 }
 
-.differentials li{
-    font-size:17px;
-    background:#e6f1ec;
-    padding:18px;
-    border-radius:14px;
-}
-
-/* CONTACT */
-#contato{
-    background:#e6f1ec;
-}
-
-.contact{
-    border-radius:24px;
-    padding:55px;
-    max-width:950px;
-    margin:auto;
-    background:var(--card);
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-}
-
-.contact h4{
-    margin-bottom:15px;
-    color:var(--brand-dark);
-}
-
-.contact p{
-    font-size:17px;
-    margin-bottom:10px;
-}
-
-.contact .box{
-    background:#f0f7f4;
-    padding:25px;
-    border-radius:16px;
+.contato p {
+    margin-bottom: 15px;
+    font-size: 18px;
 }
 
 /* FOOTER */
-footer{
-    background:var(--brand-dark);
-    color:white;
-    text-align:center;
-    padding:35px 8%;
-    margin-top:60px;
-}
-
-/* WHATSAPP */
-.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    background:#22c55e;
-    color:white;
-    padding:14px 20px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
+footer {
+    background: #1b1b1b;
+    color: #bbb;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
 }
 
 /* RESPONSIVO */
-@media(max-width:900px){
-    .hero{
-        grid-template-columns:1fr;
-        text-align:center;
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .differentials ul{
-        grid-template-columns:1fr;
+    nav a {
+        margin: 0 10px;
     }
 
-    .contact{
-        grid-template-columns:1fr;
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    .porque, .contato {
+        padding: 30px;
     }
 }
 </style>
@@ -233,94 +178,72 @@ footer{
 <body>
 
 <header>
-    <h1>Pet Amigo</h1>
-    <nav>
-        <a href="#servicos">Serviços</a>
-        <a href="#diferenciais">Por que nós?</a>
-        <a href="#contato">Contato</a>
-    </nav>
+    <div class="header-container">
+        <h1>🐾 Amigo Animal</h1>
+        <nav>
+            <a href="#servicos">Serviços</a>
+            <a href="#porque">Por que nós</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </div>
 </header>
 
 <section class="hero">
-    <div>
-        <span class="highlight">Cuidado responsável e preços justos</span>
-        <h2>O cuidado que seu pet precisa no dia a dia</h2>
-        <p>
-            Trabalhamos com atenção, higiene e respeito em cada atendimento,
-            sempre priorizando a saúde e o bem-estar do seu animal.
-        </p>
-    </div>
-
-    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e" alt="Cachorro sendo cuidado">
+    <h2>Cuidado completo, confiança e bem-estar para quem faz parte da sua família</h2>
+    <p>Serviços especializados, ambiente seguro e profissionais apaixonados por animais</p>
 </section>
 
 <section id="servicos">
     <h3>Nossos Serviços</h3>
-    <div class="services">
-        <div class="service">
-            <h4>Banho</h4>
-            <p>Limpeza completa com produtos adequados para cada tipo de pet.</p>
-            <div class="price">A partir de R$ 40</div>
+    <div class="servicos">
+        <div class="servico">
+            <span>🛁</span>
+            <h4>Banho & Higiene</h4>
+            <p>Procedimentos seguros, produtos adequados e máximo conforto para seu pet.</p>
         </div>
-
-        <div class="service">
-            <h4>Tosa</h4>
-            <p>Tosa higiênica ou padrão, feita com calma e cuidado.</p>
-            <div class="price">A partir de R$ 60</div>
+        <div class="servico">
+            <span>✂️</span>
+            <h4>Tosa Especializada</h4>
+            <p>Técnicas modernas respeitando raça, porte e estilo desejado.</p>
         </div>
-
-        <div class="service">
-            <h4>Loja Pet</h4>
-            <p>Rações, acessórios e itens essenciais para o dia a dia.</p>
-            <div class="price">Preços acessíveis</div>
+        <div class="servico">
+            <span>🩺</span>
+            <h4>Cuidados Veterinários</h4>
+            <p>Acompanhamento preventivo com profissionais capacitados.</p>
+        </div>
+        <div class="servico">
+            <span>🦴</span>
+            <h4>Produtos Premium</h4>
+            <p>Alimentação, acessórios e itens selecionados para todas as fases da vida.</p>
         </div>
     </div>
 </section>
 
-<section id="diferenciais">
-    <h3>Por que escolher o Pet Amigo?</h3>
-    <div class="differentials">
-        <p>
-            Nosso trabalho é baseado em responsabilidade, cuidado e confiança.
-            Cada atendimento é feito com atenção real ao animal e ao tutor.
-        </p>
-
+<section id="porque">
+    <div class="porque">
+        <h3>Por que escolher a Amigo Animal?</h3>
         <ul>
-            <li>✔ Atendimento cuidadoso e respeitoso</li>
-            <li>✔ Profissionais experientes</li>
-            <li>✔ Ambiente limpo e seguro</li>
-            <li>✔ Transparência nos serviços</li>
-            <li>✔ Compromisso com o bem-estar</li>
-            <li>✔ Relação de confiança com os clientes</li>
+            <li>✔ Atendimento profissional e humanizado</li>
+            <li>✔ Estrutura moderna e ambiente controlado</li>
+            <li>✔ Transparência, cuidado e responsabilidade</li>
+            <li>✔ Foco total no bem-estar do seu pet</li>
         </ul>
     </div>
 </section>
 
 <section id="contato">
-    <h3>Contato</h3>
-    <div class="contact">
-        <div class="box">
-            <h4>📍 Endereço</h4>
-            <p>Rua Exemplo, 123</p>
-            <p>Cidade / Estado</p>
-        </div>
-
-        <div class="box">
-            <h4>📞 Atendimento</h4>
-            <p>Telefone: (51) 99999-9999</p>
-            <p>Seg a Sáb • 8h às 18h</p>
-            <p>Atendimento presencial e WhatsApp</p>
-        </div>
+    <div class="contato">
+        <h3>Fale Conosco</h3>
+        <p>📍 Endereço: Rua Exemplo, 123 – Centro</p>
+        <p>📞 Telefone / WhatsApp: (51) 99999-9999</p>
+        <p>📧 Email: contato@amigoanimal.com.br</p>
+        <p>🕒 Atendimento: Segunda a Sábado – 8h às 18h</p>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Pet Amigo • Cuidado, confiança e respeito</p>
+    <p>© 2026 Amigo Animal — Cuidado, confiança e carinho</p>
 </footer>
-
-<a class="whatsapp" href="https://wa.me/5551999522416" target="_blank">
-    WhatsApp
-</a>
 
 </body>
 </html>
